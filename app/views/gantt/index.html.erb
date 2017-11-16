@@ -1,0 +1,20 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag 'https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css' %>
+    <%= javascript_include_tag 'https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js' %>
+<% end %>
+
+<div id="gantt_here" style='width:100%; height:800px;'></div>
+
+<script>
+    gantt.config.xml_date="%Y-%m-%d %H:%i";
+
+    gantt.config.order_branch = true;
+    gantt.config.order_branch_free = true;
+
+    gantt.init("gantt_here");
+    gantt.load("/api/data");
+
+    var dp = new gantt.dataProcessor("/api");
+    dp.init(gantt);
+    dp.setTransactionMode("REST");
+</script>

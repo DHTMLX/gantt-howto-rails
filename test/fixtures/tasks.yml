@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  start_date: 2017-08-24 13:25:15
+  duration: 1
+  parent: 1
+  progress: 9.99
+
+two:
+  text: MyString
+  start_date: 2017-08-24 13:25:15
+  duration: 1
+  parent: 1
+  progress: 9.99
